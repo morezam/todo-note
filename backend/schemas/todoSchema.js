@@ -5,6 +5,7 @@ export default gql`
 		title: String!
 		userId: ID!
 		completed: Boolean
+		id: ID!
 	}
 
 	extend type Query {

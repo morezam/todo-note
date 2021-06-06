@@ -4,17 +4,12 @@ export const GET_USER = gql`
 		user(id: $id) {
 			email
 			id
-			notes
-			todos
-		}
-	}
-`;
-
-export const LOG_IN = gql`
-	mutation ($email: String!, $password: String!) {
-		login(email: $email, password: $password) {
-			token
-			userId
+			notes {
+				title
+				body
+				updatedAt
+				id
+			}
 		}
 	}
 `;

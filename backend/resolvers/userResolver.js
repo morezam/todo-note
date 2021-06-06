@@ -43,6 +43,7 @@ export default {
 
 			return {
 				token,
+				userId: user.id,
 			};
 		},
 	},

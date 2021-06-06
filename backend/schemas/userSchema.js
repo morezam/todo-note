@@ -10,6 +10,7 @@ export default gql`
 
 	type Token {
 		token: String!
+		userId: ID!
 	}
 
 	extend type Query {
