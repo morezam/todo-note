@@ -17,19 +17,30 @@ export const Other = styled.div`
 `;
 
 export const Sidebar = styled.aside`
-	width: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	background-color: var(--secondary-color);
 	position: fixed;
 	top: 0;
+	width: 300px;
 	bottom: 0;
 	height: 100vh;
-	z-index: 2;
+	z-index: 200;
 	right: 0;
+
 	@media only screen and (min-width: 1000px) {
-		width: 300px;
+		display: block;
 	}
 `;
 
-export const BarWrapper = styled.div`
+export const BarsWrapper = styled.div`
 	display: none;
+	z-index: 100;
+	height: 1rem;
+	cursor: pointer;
+	@media only screen and (min-width: 600px) {
+		display: block;
+	}
+	@media only screen and (min-width: 1000px) {
+		display: none;
+	}
 `;

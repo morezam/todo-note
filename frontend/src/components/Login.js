@@ -18,7 +18,6 @@ const Login = () => {
 			},
 		}).then(res => {
 			authCtx.logIn(res.data.login.token);
-			console.log(res.data.login.token);
 		});
 	};
 

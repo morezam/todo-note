@@ -23,7 +23,9 @@ export const Btn = styled.button`
 		primary &&
 		css`
 			color: #fff;
-			background-color: var(--primary-color);
+			background-color: ${({ bgcolor }) =>
+				bgcolor ? bgcolor : 'var(--primary-color)'};
+
 			border: 1px solid currentColor;
 			align-self: center;
 			font-size: 2.5rem;
@@ -49,28 +51,43 @@ export const Btn = styled.button`
 			font-size: 2rem;
 		`}
 
-	${({ tertiary }) =>
-		tertiary &&
+	${({ logout }) =>
+		logout &&
 		css`
-			color: var(--primary-color-dark);
-			border: 1px solid #fff;
+			font-size: 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			&:hover {
-				border: 1px solid var(--primary-color-dark);
+			background-color: var(--secondary-color);
+
+			/* @media only screen and (min-width: 500px) {
+				position: relative;
+			} */
+			@media only screen and (min-width: 1000px) {
+				width: 100%;
+				position: relative;
+				border-radius: 0;
 			}
 		`}
 
-	${({ nav }) =>
-		nav &&
+	${({ todo }) =>
+		todo &&
 		css`
-			color: #fff;
-			border: 1px solid #fff;
-			background-color: transparent;
-			width: 80vw;
-			padding: 2rem 0;
+			color: var(--color-primary);
+			border: 1px solid transparent;
+			padding: 1rem;
+			margin-left: 2rem;
+			background-color: green;
 			font-size: 2rem;
+			border-radius: 1rem;
+
+			@media only screen and (min-width: 400px) {
+				padding: 1.5rem 3rem;
+			}
 			&:hover {
-				background-color: transparent;
+				background-color: green;
+				opacity: 0.8;
 			}
 		`}
 `;

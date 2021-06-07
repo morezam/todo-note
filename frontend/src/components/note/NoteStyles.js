@@ -8,6 +8,7 @@ export const NotesWrapper = styled.div`
 
 export const NoteUl = styled.ul`
 	list-style: none;
+	margin-top: 5rem;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 2rem;
@@ -85,6 +86,7 @@ export const NoteWrapper = styled.div`
 	position: relative;
 	display: flex;
 	justify-content: center;
+	margin-top: 5rem;
 `;
 export const InputsWrapper = styled.div`
 	display: flex;
@@ -105,7 +107,7 @@ export const NoteInput = styled.textarea`
 	z-index: 2;
 	overflow: hidden;
 	@media only screen and (min-width: 400px) {
-		min-width: 60vw;
+		min-width: 70vw;
 	}
 
 	&:focus {
@@ -124,7 +126,7 @@ export const NoteCheck = styled.div`
 	padding: 1rem 0;
 	cursor: pointer;
 	@media only screen and (min-width: 400px) {
-		min-width: 60vw;
+		min-width: 70vw;
 	}
 `;
 
@@ -141,7 +143,7 @@ export const TextArea = styled.textarea`
 	align-self: flex-end;
 
 	@media only screen and (min-width: 400px) {
-		min-width: 60vw;
+		min-width: 70vw;
 		height: 70vh;
 	}
 

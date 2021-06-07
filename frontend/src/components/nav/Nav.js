@@ -9,6 +9,7 @@ import {
 	NavClose,
 	NavLogo,
 } from './NavStyles';
+import Logo from '../Logo';
 
 const Nav = () => {
 	const [active, setActive] = useState(false);
@@ -17,10 +18,7 @@ const Nav = () => {
 		<NavWrapper>
 			<div>
 				<StyledLink to="/" color="#000">
-					<NavLogo>
-						<FaBookOpen />
-						..NOTY
-					</NavLogo>
+					<Logo />
 				</StyledLink>
 			</div>
 			<NavBars onClick={() => setActive(!active)}>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_TODO } from '../../query/mutations/todo';
 import { GET_TODOS } from '../../query/queries/todo';
+import { Btn } from '../Btn';
+import { TodoInput, TodoForm } from './TodoStyles';
 
 const CreateTodo = () => {
 	const [title, setTitle] = useState('');
@@ -24,16 +26,18 @@ const CreateTodo = () => {
 
 	return (
 		<>
-			<form onSubmit={e => e.preventDefault()}>
-				<input
+			<TodoForm onSubmit={e => e.preventDefault()}>
+				<TodoInput
 					type="text"
 					value={title}
 					onChange={e => setTitle(e.target.value)}
 					placeholder="Enter New Todo"
 				/>
 
-				<button onClick={onButtonClick}>Done</button>
-			</form>
+				<Btn todo onClick={onButtonClick}>
+					Done
+				</Btn>
+			</TodoForm>
 		</>
 	);
 };

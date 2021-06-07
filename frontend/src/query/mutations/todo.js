@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const CHANGE_COMPLETED = gql`
-	mutation ($id: ID!, $title: String!, $completed: Boolean) {
+	mutation ($id: ID!, $title: String!, $completed: Boolean!) {
 		updateTodo(id: $id, title: $title, completed: $completed) {
 			id
 			completed

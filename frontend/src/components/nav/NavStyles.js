@@ -69,14 +69,6 @@ export const NavClose = styled.div`
 	}
 `;
 
-export const NavLogo = styled.p`
-	font-size: 2.5rem;
-	display: flex;
-	align-items: center;
-	font-family: 'Krona One', sans-serif;
-	margin: 1rem;
-`;
-
 export const NavBars = styled.div`
 	position: relative;
 	font-size: 3rem;

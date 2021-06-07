@@ -7,6 +7,17 @@ export const Ul = styled.ul`
 
 export const StyledLink = styled(Link)`
 	text-decoration: none;
-	color: var(--color-primary);
+	display: flex;
+	color: #231e23;
+	align-items: center;
 	font-size: 2.5rem;
+	margin: 0 0 1rem 0;
+	padding: 2rem;
+	& > * {
+		margin-right: 5rem;
+	}
+
+	&:hover {
+		background-color: #deeeea;
+	}
 `;

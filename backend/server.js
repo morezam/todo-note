@@ -26,7 +26,6 @@ const server = new ApolloServer({
 	context: async ({ req }) => {
 		if (req) {
 			const authUser = await getUser(req);
-			console.log(authUser);
 			return {
 				authUser,
 				models: {

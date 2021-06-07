@@ -2,6 +2,7 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 import { GET_TODOS } from '../../query/queries/todo';
 import { DELETE_TODO } from '../../query/mutations/todo';
+import { FaTrash } from 'react-icons/fa';
 
 const DeleteTodo = ({ todoId }) => {
 	const [deleteTodo] = useMutation(DELETE_TODO, {
@@ -26,7 +27,12 @@ const DeleteTodo = ({ todoId }) => {
 			},
 		});
 	};
-	return <button onClick={() => onTodoDelete(todoId)}>X</button>;
+	return (
+		<FaTrash
+			onClick={() => onTodoDelete(todoId)}
+			style={{ cursor: 'pointer' }}
+		/>
+	);
 };
 
 export default DeleteTodo;

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { FaCheckCircle } from 'react-icons/fa';
 import { UPDATE_TODO } from '../../query/mutations/todo';
 import { GET_TODOS } from '../../query/queries/todo';
+import { UpdateInput, TodoWrapper } from './TodoStyles';
 
 const Input = ({ todo, children }) => {
 	const [title, setTitle] = useState(todo.title);
@@ -23,10 +25,18 @@ const Input = ({ todo, children }) => {
 	};
 
 	return (
-		<div>
-			<input value={title} onChange={e => setTitle(e.target.value)} />
-			{todo.title === title ? children : <button onClick={onUpdate}>C</button>}
-		</div>
+		<TodoWrapper>
+			<UpdateInput
+				spellCheck={false}
+				value={title}
+				onChange={e => setTitle(e.target.value)}
+			/>
+			{todo.title === title ? (
+				children
+			) : (
+				<FaCheckCircle style={{ cursor: 'pointer' }} onClick={onUpdate} />
+			)}
+		</TodoWrapper>
 	);
 };
 

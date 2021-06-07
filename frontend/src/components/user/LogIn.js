@@ -28,7 +28,6 @@ const LogIn = () => {
 		logIn({
 			variables: { email: val, password: pas },
 		}).then(res => {
-			console.log(res);
 			authCtx.logIn(res.data.login.token);
 			setUserId(res.data.login.userId);
 		});
