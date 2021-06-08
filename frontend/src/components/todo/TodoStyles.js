@@ -63,6 +63,7 @@ export const CheckWrapper = styled.div`
 	z-index: 3;
 	margin-right: 1rem;
 	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
 	/* background-color: var(--primary-color); */
 `;
 

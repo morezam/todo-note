@@ -1,39 +1,29 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
 	useHistory,
-	Link,
 } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { RiSunFill, RiMoonClearFill } from 'react-icons/ri';
 import AuthContext from '../../context/auth-context';
-import { GET_USER } from '../../query/queries/user';
 import CreateNote from '../note/CreateNote';
 import ShowNote from '../note/ShowNote';
 import ShowNotes from '../note/ShowNotes';
-import { Other, Parent, Sidebar, BarsWrapper } from './PanelStyles';
+import { Other, Parent, Sidebar, ModeWrapper } from './PanelStyles';
 import SideList from './SideList';
 import ShowTodos from '../todo/ShowTodos';
-import { FaBars, FaPlus } from 'react-icons/fa';
 import PanelNav from './PanelNav';
-import { NoteCreate } from '../note/NoteStyles';
-import LogOut from '../user/LogOut';
+import ThemeContext from '../../context/theme-context';
+import Modes from '../Modes';
 
-const Panel = props => {
-	const userId = props?.location.state.userId;
+const Panel = () => {
 	const authCtx = useContext(AuthContext);
+	const themeCtx = useContext(ThemeContext);
 	const history = useHistory();
-	const [open, setOpen] = useState(false);
-
-	const { data } = useQuery(GET_USER, {
-		variables: {
-			id: userId,
-		},
-	});
 
 	if (!authCtx.isAuthenticated) {
-		history.replace('/login');
+		history.replace('/');
 	}
 
 	return (
@@ -41,15 +31,18 @@ const Panel = props => {
 			<Parent>
 				<Sidebar>
 					<SideList />
+					<ModeWrapper onClick={() => themeCtx.toggleTheme()}>
+						<Modes />
+					</ModeWrapper>
 				</Sidebar>
 				<PanelNav />
 				<Other>
 					<Switch>
 						<Route exact path="/panel">
-							<ShowNotes notes={data?.user.notes} />
+							<ShowNotes />
 						</Route>
 						<Route path="/panel/create">
-							<CreateNote userId={userId} />
+							<CreateNote />
 						</Route>
 						<Route
 							path="/panel/note/:id"

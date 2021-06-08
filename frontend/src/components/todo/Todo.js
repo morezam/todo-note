@@ -14,27 +14,25 @@ const Todo = ({ todo }) => {
 			variables: {
 				id: todo.id,
 				title: todo.title,
-				completed: todo.completed ? false : true,
+				completed: !todo.completed,
 			},
 			refetchQueries: [
 				{
 					query: GET_TODOS,
 				},
 			],
-			optimisticResponse: {
-				updateTodo: {
-					id: todo.id,
-					completed: todo.completed ? false : true,
-					__typename: 'Todo',
-				},
-			},
 		});
 	};
 
 	return (
 		<TodoLi>
 			<CheckWrapper onClick={() => onLiClick(todo)}>
-				<FaCheck style={{ display: `${todo.completed ? 'block' : 'none'}` }} />
+				<FaCheck
+					style={{
+						display: `${todo.completed ? 'block' : 'none'}`,
+						color: 'inherit',
+					}}
+				/>
 			</CheckWrapper>
 			<UpdateTodo todo={todo}>
 				<DeleteTodo todoId={todo.id} />

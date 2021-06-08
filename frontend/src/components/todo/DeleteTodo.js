@@ -30,7 +30,7 @@ const DeleteTodo = ({ todoId }) => {
 	return (
 		<FaTrash
 			onClick={() => onTodoDelete(todoId)}
-			style={{ cursor: 'pointer' }}
+			style={{ cursor: 'pointer', color: '#393e46' }}
 		/>
 	);
 };

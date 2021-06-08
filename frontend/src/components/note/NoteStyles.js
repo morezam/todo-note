@@ -10,6 +10,8 @@ export const NoteUl = styled.ul`
 	list-style: none;
 	margin-top: 5rem;
 	display: grid;
+	color: ${({ theme }) => theme.noteColor};
+
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 2rem;
 	@media only screen and (min-width: 600px) {
@@ -24,14 +26,15 @@ export const NoteLink = styled(Link)`
 	text-decoration: none;
 	/* width: 30rem; */
 	height: 25rem;
-	background-color: var(--white-color);
+	background-color: ${({ theme }) => theme.noteBack};
 	display: block;
 	border-radius: 1rem;
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 	transition: all 0.3s;
 	padding: 2rem 2.5rem;
-	color: var(--primary-color);
 	position: relative;
+	color: ${({ theme }) => theme.noteColor};
+
 	/* transform: scale(1.02); */
 `;
 
@@ -92,8 +95,10 @@ export const InputsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2rem;
+	/* padding: 2rem; */
 	justify-content: flex-end;
+	background-color: ${({ theme }) => theme.noteBack};
+	color: ${({ theme }) => theme.noteColor};
 `;
 export const NoteInput = styled.textarea`
 	border: none;
@@ -105,9 +110,15 @@ export const NoteInput = styled.textarea`
 	box-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.1);
 	resize: none;
 	z-index: 2;
+	color: inherit;
+	background-color: inherit;
 	overflow: hidden;
 	@media only screen and (min-width: 400px) {
 		min-width: 70vw;
+	}
+
+	&::placeholder {
+		color: inherit;
 	}
 
 	&:focus {
@@ -122,6 +133,7 @@ export const NoteCheck = styled.div`
 	min-width: 90vw;
 	display: flex;
 	justify-content: center;
+
 	align-items: center;
 	padding: 1rem 0;
 	cursor: pointer;
@@ -136,11 +148,13 @@ export const TextArea = styled.textarea`
 	height: 80vh;
 	min-width: 90vw;
 	font-size: 2.1rem;
+	background-color: inherit;
 	padding: 3rem;
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 	line-height: 1.5;
 	font-family: inherit;
 	align-self: flex-end;
+	color: inherit;
 
 	@media only screen and (min-width: 400px) {
 		min-width: 70vw;
@@ -167,8 +181,9 @@ export const BackLink = styled(Link)`
 	cursor: pointer;
 	font-size: 3rem;
 	position: relative;
+	width: 3rem;
 	z-index: 1000;
 	left: 2rem;
-	color: var(--primary-color);
+	color: ${({ theme }) => theme.noteColor};
 	margin: 1rem 0 -2rem;
 `;

@@ -7,13 +7,11 @@ export const HomeWrapper = styled.section`
 	align-items: center;
 	/* background-color: rgba(108, 99, 255, 0.3); */
 	height: 95vh;
-	background-image: linear-gradient(
-			rgba(57, 62, 70, 0.9),
-			rgba(247, 243, 233, 0.8)
-		),
-		url('img/hero.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+		url('img/hero-2.jpg');
 	background-position: center;
 	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 95%);
 	/* @media only screen and (min-width: 800px) {
 		flex-direction: row;
 	} */
@@ -23,13 +21,13 @@ export const HomeContent = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	/* width: 50%; */
+	color: var(--white-color);
 `;
 
 export const HomeP = styled.p`
 	position: relative;
-	margin: 3rem 2rem 3rem 2rem;
-	font-size: 1.9rem;
+	margin: 1rem 2rem 5rem 2rem;
+	font-size: 2rem;
 	line-height: 1.6;
 	max-width: 70rem;
 	text-align: center;

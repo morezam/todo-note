@@ -13,7 +13,7 @@ import {
 	BackLink,
 } from './NoteStyles';
 
-const CreateNote = ({ userId }) => {
+const CreateNote = () => {
 	const [title, setTitle] = useState('');
 	const [body, setBody] = useState('');
 	const history = useHistory();
@@ -34,12 +34,11 @@ const CreateNote = ({ userId }) => {
 		},
 	});
 
-	const onButtonClick = userId => {
+	const onButtonClick = () => {
 		addNote({
 			variables: {
 				title,
 				body,
-				userId,
 			},
 		}).then(res => {
 			history.push('/panel');
@@ -64,7 +63,7 @@ const CreateNote = ({ userId }) => {
 						value={body}
 						onChange={e => setBody(e.target.value)}></TextArea>
 
-					<NoteCheck onClick={() => onButtonClick(userId)}>
+					<NoteCheck onClick={onButtonClick}>
 						<FaCheckCircle />
 					</NoteCheck>
 				</InputsWrapper>

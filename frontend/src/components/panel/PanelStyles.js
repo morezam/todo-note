@@ -18,7 +18,7 @@ export const Other = styled.div`
 
 export const Sidebar = styled.aside`
 	display: none;
-	background-color: var(--secondary-color);
+	background-color: ${({ theme }) => theme.noteBack};
 	position: fixed;
 	top: 0;
 	width: 300px;
@@ -32,15 +32,11 @@ export const Sidebar = styled.aside`
 	}
 `;
 
-export const BarsWrapper = styled.div`
-	display: none;
-	z-index: 100;
-	height: 1rem;
+export const ModeWrapper = styled.div`
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	font-size: 3rem;
 	cursor: pointer;
-	@media only screen and (min-width: 600px) {
-		display: block;
-	}
-	@media only screen and (min-width: 1000px) {
-		display: none;
-	}
+	color: ${({ theme }) => theme.noteColor};
 `;

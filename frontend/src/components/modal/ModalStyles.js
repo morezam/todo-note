@@ -15,7 +15,7 @@ export const BackGround = styled.div`
 `;
 
 export const ModalContent = styled.div`
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.noteBack};
 	width: 90vw;
 	height: 20rem;
 	border-radius: 1rem;

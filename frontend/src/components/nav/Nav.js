@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaWindowClose, FaBookOpen } from 'react-icons/fa';
+import { FaBars, FaWindowClose } from 'react-icons/fa';
 import {
 	StyledLink,
 	NavUlWrapper,
@@ -7,7 +7,6 @@ import {
 	NavWrapper,
 	NavBars,
 	NavClose,
-	NavLogo,
 } from './NavStyles';
 import Logo from '../Logo';
 

@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Ubuntu', sans-serif;
         box-sizing: border-box;
-        background-color: var(--gray-color);
+        background-color: ${({ theme }) => theme.body};
+        color: ${({ theme }) => theme.text};
     }
 
     :root{
