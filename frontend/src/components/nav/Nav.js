@@ -7,22 +7,23 @@ import {
 	NavWrapper,
 	NavBars,
 	NavClose,
+	LogoNav,
 } from './NavStyles';
 import Logo from '../Logo';
+import Menu from '../menu';
 
 const Nav = () => {
 	const [active, setActive] = useState(false);
 
 	return (
 		<NavWrapper>
-			<div>
+			<Menu />
+			<LogoNav>
 				<StyledLink to="/" color="#000">
 					<Logo />
 				</StyledLink>
-			</div>
-			<NavBars onClick={() => setActive(!active)}>
-				<FaBars />
-			</NavBars>
+			</LogoNav>
+
 			<NavUlWrapper active={active}>
 				<NavClose onClick={() => setActive(!active)}>
 					<FaWindowClose />

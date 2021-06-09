@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
+require('dotenv').config();
 import { ApolloServer } from 'apollo-server';
 
 import schemas from './schemas';
@@ -39,5 +40,7 @@ const server = new ApolloServer({
 });
 
 server.listen().then(() => {
-	mongoose.connect('mongodb://localhost:27017/graphql');
+	mongoose.connect(
+		`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@noteql.1xvf4.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
+	);
 });

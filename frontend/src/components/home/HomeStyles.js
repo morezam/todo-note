@@ -11,10 +11,6 @@ export const HomeWrapper = styled.section`
 		url('img/hero-2.jpg');
 	background-position: center;
 	background-size: cover;
-	clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 95%);
-	/* @media only screen and (min-width: 800px) {
-		flex-direction: row;
-	} */
 `;
 
 export const HomeContent = styled.div`

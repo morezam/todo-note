@@ -89,7 +89,10 @@ export const NoteWrapper = styled.div`
 	position: relative;
 	display: flex;
 	justify-content: center;
-	margin-top: 5rem;
+	margin-top: 10rem;
+	@media only screen and (min-width: 1000px) {
+		margin-top: 5rem;
+	}
 `;
 export const InputsWrapper = styled.div`
 	display: flex;
@@ -145,7 +148,7 @@ export const NoteCheck = styled.div`
 export const TextArea = styled.textarea`
 	resize: none;
 	border: none;
-	height: 80vh;
+	height: 60vh;
 	min-width: 90vw;
 	font-size: 2.1rem;
 	background-color: inherit;
@@ -182,6 +185,7 @@ export const BackLink = styled(Link)`
 	font-size: 3rem;
 	position: relative;
 	width: 3rem;
+	top: 2rem;
 	z-index: 1000;
 	left: 2rem;
 	color: ${({ theme }) => theme.noteColor};

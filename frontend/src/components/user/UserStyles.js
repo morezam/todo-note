@@ -18,9 +18,9 @@ export const FormWrapper = styled.div`
 export const UserForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	height: 90%;
+	height: 80%;
 	justify-content: space-evenly;
-	width: 60rem;
+	width: 50rem;
 	align-items: center;
 	background-color: var(--primary-color);
 	border-radius: 1rem;
@@ -36,7 +36,7 @@ export const Input = styled.input`
 	padding: 2rem 1.5rem;
 	font-family: inherit;
 	margin: 2rem 0;
-	min-width: 30vw;
+	min-width: 26vw;
 	font-size: 2rem;
 
 	&:focus {

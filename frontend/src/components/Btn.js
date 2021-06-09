@@ -42,9 +42,10 @@ export const Btn = styled.button`
 			&:hover {
 				color: var(--secondary-color);
 				border: 1px solid currentColor;
+				color: var(--primary-color);
 			}
 			padding: 2rem 3rem;
-			min-width: 30vw;
+			min-width: 26vw;
 			font-size: 2rem;
 		`}
 

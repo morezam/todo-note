@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Footer = styled.footer`
 	display: flex;
 	flex-direction: column;
-	background-color: var(--primary-color);
+	background-color: #1b2021;
 	@media only screen and (min-width: 600px) {
 		height: 25rem;
 		justify-content: space-around;

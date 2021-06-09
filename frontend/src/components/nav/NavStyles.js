@@ -11,6 +11,16 @@ export const NavWrapper = styled.div`
 	top: 2rem;
 `;
 
+export const LogoNav = styled.div`
+	justify-self: flex-end;
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	@media only screen and (min-width: 600px) {
+		position: relative;
+	}
+`;
+
 export const StyledLink = styled(Link)`
 	text-transform: uppercase;
 	text-decoration: none;
@@ -69,13 +79,13 @@ export const NavClose = styled.div`
 	}
 `;
 
-export const NavBars = styled.div`
-	position: relative;
-	font-size: 3rem;
-	margin: 1rem;
-	cursor: pointer;
+// export const NavBars = styled.div`
+// 	position: relative;
+// 	font-size: 3rem;
+// 	margin: 1rem;
+// 	cursor: pointer;
 
-	@media only screen and (min-width: 600px) {
-		display: none;
-	}
-`;
+// 	@media only screen and (min-width: 600px) {
+// 		display: none;
+// 	}
+// `;
