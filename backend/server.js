@@ -39,7 +39,7 @@ const server = new ApolloServer({
 	},
 });
 
-server.listen().then(() => {
+server.listen({ port: process.env.PORT || 4000 }).then(() => {
 	mongoose.connect(
 		`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@noteql.1xvf4.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
 	);
