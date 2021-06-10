@@ -78,14 +78,3 @@ export const NavClose = styled.div`
 		display: none;
 	}
 `;
-
-// export const NavBars = styled.div`
-// 	position: relative;
-// 	font-size: 3rem;
-// 	margin: 1rem;
-// 	cursor: pointer;
-
-// 	@media only screen and (min-width: 600px) {
-// 		display: none;
-// 	}
-// `;

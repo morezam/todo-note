@@ -21,13 +21,13 @@ export const TodosUl = styled.ul`
 `;
 
 export const TodoForm = styled.form`
-	margin-top: 2rem;
+	margin-top: 5rem;
 `;
 
 export const TodoInput = styled.input`
 	border: 1px solid green;
 	padding: 1.5rem;
-	width: 15rem;
+	width: 27rem;
 	border-radius: 1rem;
 	font-size: 2rem;
 
@@ -45,13 +45,9 @@ export const TodoLi = styled.li`
 	padding: 1rem;
 	background-color: rgba(249, 248, 80);
 	margin: 1rem 0;
-	width: 30rem;
+	width: 40rem;
 	border-radius: 1rem;
 	font-size: 1.7rem;
-
-	@media only screen and (min-width: 400px) {
-		width: 40rem;
-	}
 `;
 
 export const CheckWrapper = styled.div`

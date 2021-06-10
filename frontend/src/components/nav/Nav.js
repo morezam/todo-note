@@ -32,10 +32,10 @@ const Nav = () => {
 						<StyledLink to="/">Home</StyledLink>
 					</li>
 					<li>
-						<StyledLink to="signup">Signup</StyledLink>
+						<StyledLink to="/signup">Signup</StyledLink>
 					</li>
 					<li>
-						<StyledLink to="login">Login</StyledLink>
+						<StyledLink to="/login">Login</StyledLink>
 					</li>
 				</NavUl>
 			</NavUlWrapper>

@@ -1,35 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { FaCheck } from 'react-icons/fa';
-import { GET_TODOS } from '../../query/queries/todo';
 import { CHANGE_COMPLETED } from '../../query/mutations/todo';
 import UpdateTodo from './UpdateTodo';
 import DeleteTodo from './DeleteTodo';
 import { CheckWrapper, TodoLi } from './TodoStyles';
 
 const Todo = ({ todo }) => {
+	const [hide, setHide] = useState(false);
 	const [changeCompleted] = useMutation(CHANGE_COMPLETED);
 	const onLiClick = todo => {
 		changeCompleted({
 			variables: {
 				id: todo.id,
 				title: todo.title,
-				completed: !todo.completed,
+				completed: todo.completed === true ? false : true,
 			},
-			refetchQueries: [
-				{
-					query: GET_TODOS,
-				},
-			],
 		});
 	};
 
 	return (
 		<TodoLi>
-			<CheckWrapper onClick={() => onLiClick(todo)}>
+			<CheckWrapper
+				onClick={() => {
+					onLiClick(todo);
+					setHide(!hide);
+				}}>
 				<FaCheck
 					style={{
-						display: `${todo.completed ? 'block' : 'none'}`,
+						display: `${hide ? 'none' : 'block'}`,
 						color: 'inherit',
 					}}
 				/>
