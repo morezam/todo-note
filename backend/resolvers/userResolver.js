@@ -1,7 +1,7 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-export default {
+module.exports = {
 	Query: {
 		user: async (parent, { id }, { models: { userModel } }, info) => {
 			const user = await userModel.findById({ _id: id }).exec();

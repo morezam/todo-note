@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -22,7 +22,7 @@ const App = () => {
 			client={
 				new ApolloClient({
 					cache: new InMemoryCache(),
-					uri: 'http://localhost:4000',
+					uri: 'https://todo-note-ql.herokuapp.com/',
 					headers: {
 						token: authCtx.isAuthenticated || '',
 					},

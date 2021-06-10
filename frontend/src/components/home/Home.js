@@ -1,8 +1,7 @@
 import React from 'react';
 import Nav from '../nav/Nav';
-import { HomeWrapper, HomeContent, HomeP } from './HomeStyles';
+import { HomeWrapper, HomeContent, HomeP, LinkButton } from './HomeStyles';
 import { H1 } from '../Typographi';
-import { Btn } from '../Btn';
 
 const Home = () => {
 	return (
@@ -17,9 +16,7 @@ const Home = () => {
 						consectetur, laudantium reiciendis explicabo porro alias sit
 						accusantium, cum omnis incidunt pariatur praesentium eos nostrum!
 					</HomeP>
-					<Btn as="a" href="/signup" primary>
-						Signup
-					</Btn>
+					<LinkButton to="/signup">Sign up</LinkButton>
 				</HomeContent>
 			</HomeWrapper>
 		</>

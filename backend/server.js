@@ -1,14 +1,14 @@
-import jwt from 'jsonwebtoken';
-import mongoose from 'mongoose';
+const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
 require('dotenv').config();
-import { ApolloServer } from 'apollo-server';
+const { ApolloServer } = require('apollo-server');
 
-import schemas from './schemas';
-import resolvers from './resolvers';
+const schemas = require('./schemas');
+const resolvers = require('./resolvers');
 
-import userModel from './models/userModel';
-import noteModel from './models/noteModel';
-import todoModel from './models/todoModel';
+const userModel = require('./models/userModel');
+const noteModel = require('./models/noteModel');
+const todoModel = require('./models/todoModel');
 
 const getUser = async req => {
 	const token = req.headers['token'];

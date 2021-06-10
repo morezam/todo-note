@@ -1,5 +1,5 @@
-import userResolver from './userResolver';
-import noteResolver from './noteResolver';
-import todoResolver from './todoResolver';
+const userResolver = require('./userResolver');
+const noteResolver = require('./noteResolver');
+const todoResolver = require('./todoResolver');
 
-export default [userResolver, noteResolver, todoResolver];
+module.exports = [userResolver, noteResolver, todoResolver];

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.section`
@@ -27,4 +28,16 @@ export const HomeP = styled.p`
 	line-height: 1.6;
 	max-width: 70rem;
 	text-align: center;
+`;
+
+export const LinkButton = styled(Link)`
+	color: #fff;
+	background-color: ${({ bgcolor }) =>
+		bgcolor ? bgcolor : 'var(--primary-color)'};
+
+	border: none;
+	align-self: center;
+	font-size: 2.5rem;
+	padding: 1.5rem 4rem;
+	text-decoration: none;
 `;

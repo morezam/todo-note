@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { FaBars, FaWindowClose } from 'react-icons/fa';
+import { FaWindowClose } from 'react-icons/fa';
 import {
 	StyledLink,
 	NavUlWrapper,
 	NavUl,
 	NavWrapper,
-	NavBars,
 	NavClose,
 	LogoNav,
 } from './NavStyles';

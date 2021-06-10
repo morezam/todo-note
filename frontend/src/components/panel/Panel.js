@@ -5,7 +5,6 @@ import {
 	Route,
 	useHistory,
 } from 'react-router-dom';
-import { RiSunFill, RiMoonClearFill } from 'react-icons/ri';
 import AuthContext from '../../context/auth-context';
 import CreateNote from '../note/CreateNote';
 import ShowNote from '../note/ShowNote';
