@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 	Query: {
 		note: async (parent, { id }, { models: { noteModel } }, info) => {
 			const note = await noteModel.findById({ _id: id }).exec();
